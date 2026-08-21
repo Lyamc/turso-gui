@@ -1,0 +1,25 @@
+/target
+**/*.pdb
+
+# Machine-local linker (MSVC path)
+.cargo/
+
+# Local SQLite / Turso files
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+!screenshots/
+
+# WebView2 / Dioxus user data
+**/*.exe.WebView2/
+**/EBWebView/
+
+# Editor / OS
+.idea/
+.vscode/
+*.swp
+*~
+Thumbs.db
+Desktop.ini
+.DS_Store

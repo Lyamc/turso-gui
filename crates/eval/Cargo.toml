@@ -1,0 +1,9 @@
+[package]
+name = "turso-gui-eval"
+version.workspace = true
+edition.workspace = true
+publish = false
+description = "Cross-frontend feature, size, and performance evaluation"
+
+[dependencies]
+turso-gui-core.workspace = true

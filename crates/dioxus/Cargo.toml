@@ -1,0 +1,15 @@
+[package]
+name = "turso-gui-dioxus"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "turso-gui-dioxus"
+path = "src/main.rs"
+
+[dependencies]
+turso-gui-core.workspace = true
+dioxus.workspace = true
+clap.workspace = true
+tracing-subscriber.workspace = true
+rfd.workspace = true

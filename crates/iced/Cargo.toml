@@ -1,0 +1,18 @@
+[package]
+name = "turso-gui"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "turso-gui"
+path = "src/main.rs"
+
+[dependencies]
+turso-gui-core.workspace = true
+iced.workspace = true
+tokio.workspace = true
+clap.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+rfd.workspace = true

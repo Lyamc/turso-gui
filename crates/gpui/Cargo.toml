@@ -1,0 +1,17 @@
+[package]
+name = "turso-gui-gpui"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "turso-gui-gpui"
+path = "src/main.rs"
+
+[dependencies]
+turso-gui-core.workspace = true
+gpui.workspace = true
+clap.workspace = true
+anyhow.workspace = true
+tracing-subscriber.workspace = true
+rfd.workspace = true
+unicode-segmentation = "1"
