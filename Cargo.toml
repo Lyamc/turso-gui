@@ -29,6 +29,9 @@ rstk = "0.3"
 dioxus = { version = "0.6.3", features = ["desktop"] }
 
 [profile.release]
-opt-level = "z"
-lto = true
+opt-level = 3
+lto = "fat"
 codegen-units = 1
+panic = "abort"
+strip = true
+incremental = false

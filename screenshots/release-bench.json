@@ -1,0 +1,50 @@
+[
+    {
+        "name":  "iced",
+        "exe":  "turso-gui.exe",
+        "file_bytes":  10061312,
+        "cycles":  5,
+        "open_close_ms":  4280,
+        "peak_working_set":  38481920
+    },
+    {
+        "name":  "egui",
+        "exe":  "turso-gui-egui.exe",
+        "file_bytes":  12168192,
+        "cycles":  5,
+        "open_close_ms":  4635,
+        "peak_working_set":  102252544
+    },
+    {
+        "name":  "gpui",
+        "exe":  "turso-gui-gpui.exe",
+        "file_bytes":  11708928,
+        "cycles":  5,
+        "open_close_ms":  5068,
+        "peak_working_set":  88854528
+    },
+    {
+        "name":  "tk",
+        "exe":  "turso-gui-tk.exe",
+        "file_bytes":  7183872,
+        "cycles":  5,
+        "open_close_ms":  7778,
+        "peak_working_set":  63614976
+    },
+    {
+        "name":  "dioxus",
+        "exe":  "turso-gui-dioxus.exe",
+        "file_bytes":  9576448,
+        "cycles":  5,
+        "open_close_ms":  26851,
+        "peak_working_set":  376340480
+    },
+    {
+        "name":  "tui",
+        "exe":  "turso-gui-tui.exe",
+        "file_bytes":  7265792,
+        "cycles":  5,
+        "open_close_ms":  4381,
+        "peak_working_set":  37670912
+    }
+]

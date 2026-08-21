@@ -73,6 +73,28 @@ Iced additionally supports `--cli` and `-c` / `--command` for a non-GUI SQL shel
 
 On Windows, GUI apps do not spawn a console unless `--console` is set. New windows are sized to fit the work area (screen minus taskbar) and centered on screen.
 
+## Release size and performance
+
+Workspace `profile.release` is tuned for both size and speed:
+
+- `opt-level = 3`
+- `lto = "fat"`
+- `codegen-units = 1`
+- `panic = "abort"`
+- `strip = true`
+
+Measured on Windows against `target/release` binaries: file size, peak working set of the process tree (Tcl/Tk includes `wish`; Dioxus includes WebView2), and wall time to open, close, open, close five times on `local.db`. Multipliers on the chart are relative to the smallest bar in that panel.
+
+![Release size and 5× open/close](screenshots/release-compare.png)
+
+Rebuild and recapture:
+
+```powershell
+cargo build --release -p turso-gui -p turso-gui-egui -p turso-gui-gpui -p turso-gui-tk -p turso-gui-dioxus -p turso-gui-tui
+powershell -ExecutionPolicy Bypass -File tools\bench-release.ps1
+python tools\plot-release-bench.py
+```
+
 ## Tests
 
 Cross-front-end checks (features, CLI flags, debug binary size, shared-model performance) live in `crates/eval`:
